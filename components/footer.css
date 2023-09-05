@@ -1,0 +1,63 @@
+.footer__group {
+  font-family: "Time new roman";
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.footer__group__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__group__name {
+  letter-spacing: 3px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.footer__group__item {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+}
+.email__description {
+  text-transform: none;
+  font-size: 12px;
+  padding-bottom: 12px;
+  color: #b3b3b3;
+}
+.email__send__input,
+.email__send__input:focus,
+.email__send__input:focus-visible {
+  width: max-content;
+  border-radius: 0;
+  border: #333 solid 1px;
+  margin-right: 0;
+  padding: 3px 20px;
+  font-style: italic;
+  font-size: 14px;
+}
+.email__send__btn {
+  padding: 3px 20px;
+  font-size: 14px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.contact__group {
+  text-transform: none;
+}
+
+.contact__icon {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.support__email {
+  color: #e6ae48;
+  font-style: italic;
+}
+.copyright {
+  font-size: 12px;
+  color: #b3b3b3;
+}
