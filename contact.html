@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liên hệ</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="importComponent.js"></script>
+  </head>
+  <body>
+    <div include-html="navbar.html"></div>
+    <div include-html="navbar__second.html"></div>
+    <div class="container-xl pb-5">
+      <div class="breadcrumb">
+        <span class="breadcrumb__item"><a href="/">Trang chủ</a> /&nbsp; </span>
+        <span class="breadcrumb__item"><a href="">Liên hệ</a></span>
+      </div>
+      <h1 class="py-2">Liên hệ</h1>
+      <img class="pb-4" src="./Images/titleleft-dark.png" alt="" />
+      <div class="row">
+        <div class="col-lg-9 col-md-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8859.156153561775!2d105.88392135560849!3d20.99999852939227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1693901643423!5m2!1sen!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <img src="./Images/logo2.png" alt="logo" />
+          <div class="d-flex pt-1">
+            <span class="material-symbols-outlined contact__icon"> location_on </span>
+            Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+          </div>
+          <div class="pt-2">
+            <span class="material-symbols-outlined contact__icon"> contact_phone </span> (04) 6674 2332
+          </div>
+          <div class="pt-2"><span class="material-symbols-outlined contact__icon"> mail </span>support@milano.com</div>
+          <div class="mt-5 mb-1">FOLLOW US:</div>
+          <img src="./Images/sns.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-9 col-md-12">
+          <form class="d-dlex flex-column" action="">
+            <div class="form-group">
+              <label for="formNameInput">Your Name</label>
+              <input id="formNameInput" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="formEmailInput">Your Email</label>
+              <input id="formEmailInput" type="email" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="formSubjectInput">Subject</label>
+              <input id="formSubjectInput" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="formMessageTextarea">Your Message</label>
+              <textarea id="formMessageTextarea" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit" class="btn-custom" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div include-html="footer.html" class="container-xl"></div>
+  </body>
+</html>
