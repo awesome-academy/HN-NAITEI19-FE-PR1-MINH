@@ -1,0 +1,129 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liên hệ</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/reset.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="/importComponent.js"></script>
+  </head>
+  <body>
+    <div include-html="navbar.html"></div>
+    <div include-html="navbar__second.html"></div>
+    <div class="container-xl pb-5">
+      <div class="breadcrumb">
+        <span class="breadcrumb__item"><a href="/">Trang chủ</a> /&nbsp; </span>
+        <span class="breadcrumb__item"><a href="/products/category.html">Sản phẩm</a> /&nbsp; </span
+        ><span class="breadcrumb__item"><a href="/products/category.html" id="breadcrumbCategoryName"></a></span>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 border">
+          <img id="detailProductImage" class="img-fluid" alt="product image" />
+        </div>
+
+        <div class="col-lg-6 col-md-8 px-4 product__infomation__deail">
+          <h3 id="detailProductName" class="detail__prodoct__name"></h3>
+          <div id="detailProductPrice" class="detail__prodoct__price"></div>
+          <hr />
+          <img width="16" src="/icons/star_FILL1_wght400_GRAD0_opsz24.svg" />
+          <img width="16" src="/icons/star_FILL1_wght400_GRAD0_opsz24.svg" />
+          <img width="16" src="/icons/star_FILL1_wght400_GRAD0_opsz24.svg" />
+          <img width="16" src="/icons/star_half_FILL1_wght400_GRAD0_opsz24.svg" />
+          <img width="16" src="/icons/star_FILL0_wght400_GRAD0_opsz24.svg" />
+          <span>1 Review(s) | <a href="" class="text-dark">Add Your Review</a></span>
+          <hr />
+          <div class="detail__group">SỐ LƯỢNG</div>
+          <div class="d-flex my-3">
+            <div class="product__number__ctn">
+              <button class="btn__control" id="subtract">-</button>
+              <input type="number" id="numberInput" value="1" />
+              <button class="btn__control" id="add">+</button>
+            </div>
+            <button class="btn-custom mx-3">ADD TO CART</button>
+          </div>
+          <div d-flex>
+            <button class="action__btn">
+              <img src="/icons/favorite_FILL1_wght400_GRAD0_opsz24.svg" alt="" />
+              Yêu thích
+            </button>
+            <button class="action__btn">
+              <img src="/icons/signal_cellular_alt_FILL1_wght400_GRAD0_opsz24.svg" alt="" />
+              So sánh
+            </button>
+            <button class="action__btn">
+              <img src="/icons/mail_FILL1_wght400_GRAD0_opsz24.svg" alt="" />
+              Email
+            </button>
+          </div>
+          <div class="detail__group pt-3 pb-1">MÔ TẢ</div>
+          <div class="detail__prodoct__description"></div>
+        </div>
+      </div>
+      <div class="row my-5 justify-content-center">
+        <div class="col-lg-7 col-md-8">
+          <button class="btn-custom-type2 btn-custom-type2--active">ĐẶC ĐIỂM NỔI BẬT</button>
+          <button class="btn-custom-type2">THÔNG TIN SẢN PHẨM</button>
+          <button class="btn-custom-type2">ĐÁNH GIÁ</button>
+          <div class="detail__prodoct__description mt-3"></div>
+        </div>
+        <div class="col-lg-5 col-md-8">
+          <div class="relative text-center h-25">
+            <img class="object-fit-cover w-100" src="/Images/b6.jpg" alt="product image" height="200" />
+            <div class="image-text">RƯỢU NHO</div>
+          </div>
+        </div>
+      </div>
+      <section class="new-product row my-5 justify-content-center align-items-center text-center">
+        <h3>SẢN PHẨM LIÊN QUAN</h3>
+        <div>
+          <img class="img-fluid" src="/Images/title-dark.png" />
+        </div>
+        <div class="row">
+          <div class="product__card col-lg-3 col-md-6 mb-4">
+            <a href="/products/detail.html#1">
+              <img class="product__card__img" src="/Product/1.jpg" alt="product" />
+              <div class="product__card__name" id="productName1"></div>
+              <div class="product__card__price" id="productPrice1"></div>
+            </a>
+            <button class="btn-custom">ADD TO CART</button>
+          </div>
+          <div class="product__card col-lg-3 col-md-6 mb-4">
+            <a href="/products/detail.html#2">
+              <img class="product__card__img" src="/Product/2.jpg" alt="product" />
+              <div class="product__card__name" id="productName2"></div>
+              <div class="product__card__price" id="productPrice2"></div> </a
+            ><button class="btn-custom">ADD TO CART</button>
+          </div>
+          <div class="product__card col-lg-3 col-md-6 mb-4">
+            <a href="/products/detail.html#3">
+              <img class="product__card__img" src="/Product/3.jpg" alt="product" />
+              <div class="product__card__name" id="productName3"></div>
+              <div class="product__card__price" id="productPrice3"></div>
+            </a>
+            <button class="btn-custom">ADD TO CART</button>
+          </div>
+          <div class="product__card col-lg-3 col-md-6 mb-4">
+            <a href="/products/detail.html#4">
+              <img class="product__card__img" src="/Product/4.jpg" alt="product" />
+              <div class="product__card__name" id="productName4"></div>
+              <div class="product__card__price" id="productPrice4"></div> </a
+            ><button class="btn-custom">ADD TO CART</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div include-html="footer.html" class="container-xl"></div>
+  </body>
+</html>
+<script src="/products/detail.js"></script>
