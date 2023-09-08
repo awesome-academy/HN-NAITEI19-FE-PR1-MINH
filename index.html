@@ -1,0 +1,252 @@
+<!-- index.html --><!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="importComponent.js"></script>
+  </head>
+  <body>
+    <div include-html="navbar.html"></div>
+    <div class="hero-banner">
+      <img class="hero-image" src="./Images/hero.jpg" alt="hero image" />
+      <div class="banner__text text__1 prevent-select">
+        Vang Đỏ
+        <span class="banner__text text__2 prevent-select"
+          >Rượu <span class="banner__text text__3 prevent-select">Since 1980</span></span
+        >
+      </div>
+    </div>
+    <div include-html="navbar__second.html"></div>
+    <section class="introduction">
+      <img
+        class="intro__background-image intro__background-image__left"
+        src="./Images/product.jpg"
+        alt="background__image"
+      />
+      <img
+        class="intro__background-image intro__background-image__right"
+        src="./Images/product.jpg"
+        alt="background__image"
+      />
+      <div class="intro__content my-5 container-xl d-flex flex-column align-items-center">
+        <h2>GIỚI THIỆU</h2>
+        <img class="tittle__underline__img" src="./Images/title-dark.png" alt="" />
+        <p class="intro__paragraph col-xl-8 my-3">
+          Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+          facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+          duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+          doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis
+          qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt
+          saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est
+          notare quam littera gothica, quam nunc putam
+        </p>
+        <button class="btn-custom">XEM THÊM</button>
+      </div>
+    </section>
+    <section class="spotlight-product container-xl position-relative px-0">
+      <img class="w-100 position-absolute" src="./Images/wine-63931_12802-1240x829.jpg " alt="" />
+      <div class="spotlight-product__card position-relative col-xl-10 d-flex justify-content-between p-5">
+        <div class="spotlight-prouct__img__ctn position-relative d-inline-block overflow-hidden">
+          <img id="splotlightProductImage" alt="spotlight product image" class="img-fluid" />
+          <div class="tag tag__new">New</div>
+        </div>
+        <div class="spotlight-product__infomation w-40">
+          <h3 id="spotlightProductName" class="spotlight-product__name mb-0"></h3>
+          <img src="./Images/titleleft-dark.png" alt="" />
+          <div id="spotlightProductPrice" class="spotlight-product__price my-3"></div>
+          <button class="btn-custom">ADD TO CART</button>
+          <p id="spotlightProductDescription" class="spotlight-product__description py-5"></p>
+        </div>
+      </div>
+    </section>
+    <section class="new-product container-xl d-flex flex-column align-items-center">
+      <h3>SẢN PHẨM MỚI</h3>
+      <img class="tittle__underline__img" src="./Images/title-dark.png" />
+      <div class="row">
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#1">
+            <img class="product__card__img" src="./Product/1.jpg" alt="product" />
+            <div class="product__card__name" id="productName1"></div>
+            <div class="product__card__price" id="productPrice1"></div
+          ></a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#2">
+            <img class="product__card__img" src="./Product/2.jpg" alt="product" />
+            <div class="product__card__name" id="productName2"></div>
+            <div class="product__card__price" id="productPrice2"></div
+          ></a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#3">
+            <img class="product__card__img" src="./Product/3.jpg" alt="product" />
+            <div class="product__card__name" id="productName3"></div>
+            <div class="product__card__price" id="productPrice3"></div
+          ></a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#4">
+            <img class="product__card__img" src="./Product/4.jpg" alt="product" />
+            <div class="product__card__name" id="productName4"></div>
+            <div class="product__card__price" id="productPrice4"></div
+          ></a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+      </div>
+    </section>
+    <div class="banner__img__ctn container-fluid mt-5">
+      <div class="row">
+        <img class="col-3" src="./Images/b1.jpg" />
+        <img class="col-3" src="./Images/b2.jpg" />
+        <img class="col-3" src="./Images/b3.jpg" />
+        <img class="col-3" src="./Images/b4.jpg" />
+        <img class="col-3" src="./Images/b5.jpg" />
+        <img class="col-3" src="./Images/b6.jpg" />
+        <img class="col-3" src="./Images/b7.jpg" />
+        <img class="col-3" src="./Images/b8.jpg" />
+      </div>
+    </div>
+    <section class="best-selling-product container-xl d-flex flex-column align-items-center mt-5">
+      <h3>SẢN PHẨM BÁN CHẠY</h3>
+      <img class="tittle__underline__img" src="./Images/title-dark.png" />
+      <div class="row">
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#5">
+            <img class="product__card__img" src="./Product/5.jpg" alt="product" />
+            <div class="product__card__name" id="productName5"></div>
+            <div class="product__card__price" id="productPrice5"></div>
+          </a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#6">
+            <img class="product__card__img" src="./Product/6.jpg" alt="product" />
+            <div class="product__card__name" id="productName6"></div>
+            <div class="product__card__price" id="productPrice6"></div
+          ></a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#7">
+            <img class="product__card__img" src="./Product/7.jpg" alt="product" />
+            <div class="product__card__name" id="productName7"></div>
+            <div class="product__card__price" id="productPrice7"></div>
+          </a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+        <div class="product__card col-lg-3 col-md-6 mb-4">
+          <a class="text-center" href="/products/detail.html#8">
+            <img class="product__card__img" src="./Product/8.jpg" alt="product" />
+            <div class="product__card__name" id="productName8"></div>
+            <div class="product__card__price" id="productPrice8"></div>
+          </a>
+          <button class="btn-custom">ADD TO CART</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-xl">
+      <div class="row">
+        <section class="news__blog__ctn col-lg-8 col-md-12">
+          <h3 class="text-center">TIN TỨC & BLOG</h3>
+          <img class="tittle__underline__img mx-auto d-block" src="./Images/title-dark.png" />
+          <div class="blog__ctn container mt-4">
+            <div class="row">
+              <div class="blog__card col-6">
+                <img class="img-fluid" src="./Images/blog-1.jpg" alt="blog image" />
+                <div class="blog__name"><a href="/blog/detail.html">Vang Thăng Long Classic</a></div>
+                <div class="blog__info">Đăng bởi Giangle | 30/06/2015 | 60 bình luận</div>
+                <div class="blog__content">
+                  Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt
+                  ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng
+                  chai dung tích 750ml...
+                </div>
+                <a href="/blog/detail.html" class="readmore__link">Read more</a>
+              </div>
+              <div class="blog__card col-6">
+                <img class="img-fluid" src="./Images/blog-2.jpg" alt="blog image" />
+                <div class="blog__name"><a href="/blog/detail.html">Vang Thăng Long Classic</a></div>
+                <div class="blog__info">Đăng bởi Giangle | 30/06/2015 | 60 bình luận</div>
+                <div class="blog__content">
+                  Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt
+                  ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng
+                  chai dung tích 750ml...
+                </div>
+                <a href="/blog/detail.html" class="readmore__link">Read more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="customer__ctn col-lg-4 col-md-12">
+          <h3 class="text-center">KHÁCH HÀNG</h3>
+          <img class="tittle__underline__img mx-auto d-block" src="./Images/title-dark.png" />
+          <div class="customer__double-quote">”</div>
+          <div class="customer__quote">
+            Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
+            đầy trắng mịn. Vang Nổ thăng long ...
+          </div>
+          <div class="text-center">
+            <a href="" class="readmore__link">Read more</a>
+          </div>
+          <img class="rounded mx-auto d-block my-3" src="./Images/timthumb.png" width="120" />
+          <div class="customer__name text-center">GIANG LT</div>
+          <div class="customer__job">Graphic design</div>
+        </section>
+      </div>
+    </div>
+
+    <div include-html="footer.html" class="container-xl"></div>
+  </body>
+</html>
+
+<script>
+  function generateRandomNumber() {
+    const min = 1
+    const max = 14
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
+    return randomNumber
+  }
+
+  function formatMoney(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "<sup>đ</sup>"
+  }
+  window.addEventListener("load", function () {
+    const spotlightProductId = generateRandomNumber()
+    document.getElementById("splotlightProductImage").src = `./Product/${spotlightProductId}.jpg`
+    const apiUrl = `http://localhost:3000/product`
+    let fetchData = {}
+    fetch(apiUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`)
+        }
+        return response.json()
+      })
+      .then((data) => {
+        fetchData = data
+        document.getElementById("spotlightProductName").innerText = fetchData[spotlightProductId - 1].name
+        document.getElementById("spotlightProductDescription").innerText = fetchData[spotlightProductId - 1].description
+        document.getElementById("spotlightProductPrice").innerHTML = formatMoney(
+          fetchData[spotlightProductId - 1].price,
+        )
+        fetchData.forEach((e) => {
+          document.getElementById(`productName${e.id}`).innerText = e.name
+          document.getElementById(`productPrice${e.id}`).innerHTML = formatMoney(e.price)
+        })
+      })
+      .catch((error) => {
+        console.error("Error:", error)
+      })
+  })
+</script>
