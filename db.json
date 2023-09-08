@@ -1,0 +1,259 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "La Capra",
+      "category": "Red Wine",
+      "price": 330000,
+      "description": "La Capra is a delightful red wine with a rich and velvety texture. Originating from the rolling vineyards of Italy, it boasts notes of ripe cherries and a hint of oak. Perfect for a cozy evening by the fireplace."
+    },
+    {
+      "id": 2,
+      "name": "Torello Raimonda",
+      "category": "Sparkling Wine",
+      "price": 350000,
+      "description": "Torello Raimonda is a sparkling wine that exudes elegance and finesse. Hailing from the renowned vineyards of Spain, it offers crisp apple and citrus flavors with a touch of floral undertones. Ideal for celebrations and toasts."
+    },
+    {
+      "id": 3,
+      "name": "Torello Crisalys 05",
+      "category": "White Wine",
+      "price": 370000,
+      "description": "Torello Crisalys 05 is a refined white wine originating from the lush vineyards of Italy. This vintage wine showcases a harmonious blend of tropical fruits and a subtle mineral finish, making it a splendid choice for seafood pairing."
+    },
+    {
+      "id": 4,
+      "name": "Torello DOLC",
+      "category": "Dessert Wine",
+      "price": 400000,
+      "description": "Torello DOLC is a sweet and indulgent dessert wine that hails from the sun-kissed vineyards of Spain. With its luscious notes of honey, apricot, and candied orange peel, it's the perfect finale to a memorable meal."
+    },
+    {
+      "id": 5,
+      "name": "Torello Marc",
+      "category": "Red Wine",
+      "price": 330000,
+      "description": "Torello Marc is a bold red wine with a distinct character. Crafted in the heart of Spain, it boasts intense blackberry and dark chocolate flavors, accompanied by a touch of smoky oak. A wine for connoisseurs."
+    },
+    {
+      "id": 6,
+      "name": "Torello Brut Reserva",
+      "category": "Sparkling Wine",
+      "price": 360000,
+      "description": "Torello Brut Reserva is a sparkling gem from the vineyards of Spain. Its lively bubbles dance on the palate, revealing crisp green apple and toasted almond notes. An excellent choice for celebrating life's moments."
+    },
+    {
+      "id": 7,
+      "name": "Torello Petjades Merlot",
+      "category": "Red Wine",
+      "price": 380000,
+      "description": "Torello Petjades Merlot is a charismatic red wine from Spain. With its velvety texture and flavors of ripe plum and black cherry, it's a wine that leaves a lasting impression. Perfect for a romantic dinner."
+    },
+    {
+      "id": 8,
+      "name": "Campercho Torcana Italia Merlot",
+      "category": "Red Wine",
+      "price": 420000,
+      "description": "Campercho Torcana Italia Merlot is an Italian masterpiece known for its smoothness and elegance. It offers a symphony of red berry flavors and a subtle herbal undertone. A delightful wine for any occasion."
+    },
+    {
+      "id": 9,
+      "name": "Root:1",
+      "category": "Red Wine",
+      "price": 410000,
+      "description": "Root:1 is a Chilean red wine with deep roots in the Maipo Valley. This wine is celebrated for its intense blackcurrant and plum notes, balanced by a hint of spice. A true expression of Chilean terroir."
+    },
+    {
+      "id": 10,
+      "name": "Primario Puglia",
+      "category": "Red Wine",
+      "price": 390000,
+      "description": "Primario Puglia is a rustic Italian red wine that captures the essence of the Puglia region. It offers bold red fruit flavors, earthy undertones, and a touch of Mediterranean herbs. A wine that transports you to southern Italy."
+    },
+    {
+      "id": 11,
+      "name": "Admit One",
+      "category": "Red Wine",
+      "price": 380000,
+      "description": "Admit One is a mysterious and captivating red wine that keeps you guessing with every sip. Its blend of dark fruit, vanilla, and subtle tobacco notes adds an element of intrigue to your wine experience."
+    },
+    {
+      "id": 12,
+      "name": "Que Guapo",
+      "category": "Rosé Wine",
+      "price": 370000,
+      "description": "Que Guapo is a charming rosé wine that embodies the spirit of Spain. With its fresh strawberry and citrus aromas, it's a lively and vibrant wine that adds a touch of flair to any gathering."
+    },
+    {
+      "id": 13,
+      "name": "Riesling",
+      "category": "White Wine",
+      "price": 360000,
+      "description": "Riesling is a classic white wine that hails from the renowned vineyards of Germany. Known for its crisp acidity and vibrant citrus flavors, it's a versatile wine that pairs beautifully with a variety of cuisines."
+    },
+    {
+      "id": 14,
+      "name": "Alpatago",
+      "category": "Red Wine",
+      "price": 420000,
+      "description": "Alpatago is a bold red wine from the high-altitude vineyards of Argentina. It showcases intense dark fruit flavors, a hint of cocoa, and a velvety finish. A wine that embodies the spirit of the Andes."
+    },
+    {
+      "id": 15,
+      "name": "Chardonnay Reserve",
+      "category": "White Wine",
+      "price": 350000,
+      "description": "Chardonnay Reserve is a California white wine that embodies the essence of sunshine and elegance. It offers flavors of ripe green apple, vanilla, and a subtle hint of toasted oak, making it a perfect companion for seafood dishes."
+    },
+    {
+      "id": 16,
+      "name": "Sauvignon Blanc",
+      "category": "White Wine",
+      "price": 360000,
+      "description": "Sauvignon Blanc is a crisp and refreshing New Zealand white wine known for its vibrant citrus and tropical fruit aromas. It pairs wonderfully with fresh salads and light cheeses."
+    },
+    {
+      "id": 17,
+      "name": "Pinot Grigio",
+      "category": "White Wine",
+      "price": 380000,
+      "description": "Pinot Grigio is an Italian classic with a bright and zesty character. It features notes of green pear, lemon zest, and a touch of minerality, making it an excellent choice for a sunny afternoon."
+    },
+    {
+      "id": 18,
+      "name": "Viognier",
+      "category": "White Wine",
+      "price": 390000,
+      "description": "Viognier is a fragrant white wine with origins in France's Rhône Valley. It delights the senses with its floral aromas, peach, and apricot flavors, and a silky finish. A wine for moments of indulgence."
+    },
+    {
+      "id": 19,
+      "name": "Riesling Spätlese",
+      "category": "White Wine",
+      "price": 320000,
+      "description": "Riesling Spätlese is a German late-harvest white wine, renowned for its sweetness and balanced acidity. It bursts with flavors of ripe apricot, honey, and a hint of petrol, making it a dessert wine to remember."
+    },
+    {
+      "id": 20,
+      "name": "Veuve Clicquot Brut Yellow Label",
+      "category": "Champagne",
+      "price": 450000,
+      "description": "Veuve Clicquot Brut Yellow Label is an iconic champagne from France. It charms with its fine bubbles, crisp green apple, and brioche notes. A symbol of celebration and luxury."
+    },
+    {
+      "id": 21,
+      "name": "Dom Pérignon Vintage",
+      "category": "Champagne",
+      "price": 420000,
+      "description": "Dom Pérignon Vintage is the epitome of prestige in the champagne world. Crafted with meticulous care in the Champagne region of France, it boasts rich, complex flavors of white peach, toasted almond, and a long, elegant finish."
+    },
+    {
+      "id": 22,
+      "name": "Moët & Chandon Impérial",
+      "category": "Champagne",
+      "price": 470000,
+      "description": "Moët & Chandon Impérial is a classic champagne known for its vibrant fruitiness and elegance. It's a harmonious blend of green apple, citrus, and white flowers, making it a choice for celebrations big and small."
+    },
+    {
+      "id": 23,
+      "name": "Perrier-Jouët Belle Epoque",
+      "category": "Champagne",
+      "price": 500000,
+      "description": "Perrier-Jouët Belle Epoque is a champagne of art and beauty. With its delicate floral aromas, white peach, and a touch of honeysuckle, it's a champagne that captures the essence of romance."
+    },
+    {
+      "id": 24,
+      "name": "Krug Grande Cuvée",
+      "category": "Champagne",
+      "price": 530000,
+      "description": "Krug Grande Cuvée is a masterpiece of champagne craftsmanship. From the esteemed house of Krug, it offers an opulent blend of honey, toasted bread, and candied fruit flavors, creating a sensory symphony for the palate."
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Nguyễn Quang",
+      "lastName": "Huy",
+      "email": "huy123@gmail.com",
+      "password": "123456",
+      "rePassword": "123456",
+      "subscribe": false,
+      "id": 2
+    },
+    {
+      "firstName": "Nguyen Van",
+      "lastName": "Anh",
+      "email": "anh123@gmail.com",
+      "password": "123456",
+      "rePassword": "123456",
+      "subscribe": false,
+      "id": 3
+    },
+    {
+      "firstName": "Đào Nhật",
+      "lastName": "Minh",
+      "email": "minhdaadaxb@gmail.com",
+      "password": "aaa",
+      "rePassword": "aaa",
+      "subscribe": false,
+      "id": 6
+    }
+  ],
+  "order": [
+    {
+      "cart": {
+        "1": 1,
+        "2": "2"
+      },
+      "cartTotal": 1030000,
+      "id": 1
+    },
+    {
+      "cart": {
+        "2": 2,
+        "4": 1,
+        "5": 1,
+        "6": "5"
+      },
+      "cartTotal": 3230000,
+      "id": 2
+    },
+    {
+      "cart": {
+        "4": 1,
+        "20": 1,
+        "21": 1,
+        "22": 1,
+        "24": 1
+      },
+      "cartTotal": 2270000,
+      "id": 3
+    },
+    {
+      "cart": {
+        "2": 1,
+        "4": 1,
+        "5": 1
+      },
+      "cartTotal": 1080000,
+      "id": 4
+    },
+    {
+      "cart": {
+        "1": "2",
+        "3": 1,
+        "5": "3"
+      },
+      "cartTotal": 2020000,
+      "id": 5
+    },
+    {
+      "cart": {
+        "1": 1,
+        "3": "1",
+        "5": "7"
+      },
+      "cartTotal": 3010000,
+      "id": 6
+    }
+  ]
+}
