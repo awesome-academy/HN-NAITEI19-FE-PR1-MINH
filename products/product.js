@@ -1,4 +1,5 @@
-let fetchData = []
+let fetchData = [],
+  filteredData = []
 let currentPage = 1
 const productsPerPage = 6
 let currentViewMode = 0
@@ -36,6 +37,7 @@ window.addEventListener("load", function () {
     })
     .then((data) => {
       fetchData = data
+      filteredData = data
       fetchData.forEach((e) => {
         if (!categoryCounter.hasOwnProperty(e.category)) {
           categoryCounter[e.category] = 1
@@ -55,6 +57,8 @@ window.addEventListener("load", function () {
         })
         const parentElement = event.target.parentNode
         parentElement.classList.add("category__list_item--active")
+        filteredData = fetchData
+        paginateProducts()
       })
 
       for (const [key, value] of Object.entries(categoryCounter)) {
@@ -66,6 +70,8 @@ window.addEventListener("load", function () {
           })
           const parentElement = event.target.parentNode
           parentElement.classList.add("category__list_item--active")
+          filteredData = fetchData.filter((e) => e.category == key)
+          paginateProducts()
         })
         listItem.className = "category__list_item"
         listItem.innerHTML = `<a href="#${tmpCategory}">${mappingCategory[tmpCategory]} (${value})</a>`
@@ -97,7 +103,7 @@ function displayProductsGrid(products) {
           <a href="/products/detail.html#${product.id}">${product.name}</a>
         </h3>
         <div class="product__price__grid">${formatMoney(product.price)}</div>
-        <button class="btn-custom">ADD TO CART</button>
+        <button class="btn-custom" onClick="addToCart(${product.id}, 1)">ADD TO CART</button>
       </div>
     `
     rowTemplate.appendChild(productItem)
@@ -127,7 +133,7 @@ function displayProductsList(products) {
         <div class="product__price__list">${formatMoney(product.price)}</div>
         
         <p class="product__description__list">${product.description}</p>
-        <button class="btn-custom">ADD TO CART</button>
+        <button class="btn-custom" onClick="addToCart(${product.id}, 1)">ADD TO CART</button>
         <button class="btn-custom-type2"><span class="material-symbols-outlined">
         favorite
         </span>Yêu thích</button>
@@ -145,7 +151,7 @@ function displayProductsList(products) {
 function updatePagination() {
   const prevPageBtn = document.getElementById("prevPageBtn")
   const nextPageBtn = document.getElementById("nextPageBtn")
-  const totalPages = Math.ceil(fetchData.length / productsPerPage)
+  const totalPages = Math.ceil(filteredData.length / productsPerPage)
 
   prevPageBtn.disabled = currentPage === 1
   nextPageBtn.disabled = currentPage === totalPages
@@ -156,7 +162,7 @@ function updatePagination() {
 function paginateProducts() {
   const startIndex = (currentPage - 1) * productsPerPage
   const endIndex = startIndex + productsPerPage
-  const displayedProducts = fetchData.slice(startIndex, endIndex)
+  const displayedProducts = filteredData.slice(startIndex, endIndex)
 
   document.querySelector("#gridView").addEventListener("click", () => {
     currentViewMode = 0
@@ -182,7 +188,7 @@ document.getElementById("prevPageBtn").addEventListener("click", () => {
 })
 
 document.getElementById("nextPageBtn").addEventListener("click", () => {
-  const totalPages = Math.ceil(fetchData.length / productsPerPage)
+  const totalPages = Math.ceil(filteredData.length / productsPerPage)
   if (currentPage < totalPages) {
     currentPage++
     paginateProducts()
