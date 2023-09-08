@@ -1,0 +1,159 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đơn hàng</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="importComponent.js"></script>
+  </head>
+  <body>
+    <div include-html="navbar.html"></div>
+    <div class="blank__space__black"></div>
+    <div include-html="navbar__second.html"></div>
+
+    <div class="container-xl pb-5">
+      <div class="breadcrumb">
+        <span class="breadcrumb__item"><a href="/">Trang chủ</a> /&nbsp; </span>
+        <span class="breadcrumb__item"><a href=""> Đơn hàng</a></span>
+      </div>
+      <h1 class="py-2">Đơn hàng</h1>
+      <img class="pb-4" src="./Images/titleleft-dark.png" alt="" />
+      <table class="table text-center align-middle table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">SỐ SẢN PHẨM</th>
+            <th scope="col">TỔNG TIỀN</th>
+            <th scope="col">TÌNH TRẠNG</th>
+            <th scope="col">THAO TÁC</th>
+          </tr>
+        </thead>
+        <tbody id="cartTable"></tbody>
+      </table>
+    </div>
+    <div include-html="footer.html" class="container-xl"></div>
+
+    <div
+      class="modal fade"
+      id="popupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Chi tiết</h5>
+          </div>
+          <div class="modal-body">
+            <table class="table text-center align-middle table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">ẢNH</th>
+                  <th scope="col">TÊN SẢN PHẨM</th>
+                  <th scope="col">SỐ LƯỢNG</th>
+                </tr>
+              </thead>
+              <tbody id="detailCartTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let orderData = {}
+  fetch(`http://localhost:3000/order`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`)
+      }
+      return response.json()
+    })
+    .then((data) => {
+      orderData = data
+    })
+    .catch((error) => {
+      console.error("Error:", error)
+    })
+    .finally(() => {
+      for (let [id, detailOrderData] of Object.entries(orderData)) {
+        let count = 0
+        for (let [productId, num] of Object.entries(detailOrderData.cart)) {
+          count += parseInt(num)
+        }
+        const newRow = document.createElement("tr")
+        newRow.innerHTML = `
+        <td><div class="table__product__name">${detailOrderData.id}</div></td>
+        <td>${count}</td>
+        <td><div class="table__product__money">${formatMoney(detailOrderData.cartTotal)}</div></td>
+
+        <td><div class="table__product__name">Thành công<div></td>
+        <td>
+          <button class="btn-custom-type2" onClick="getDetailOrder(${detailOrderData.id})">
+            <span class="material-symbols-outlined fs-3">
+              info
+            </span>
+          </button>
+        </td>
+      `
+        document.getElementById("cartTable").appendChild(newRow)
+      }
+    })
+
+  function formatMoney(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "<sup>đ</sup>"
+  }
+
+  function getDetailOrder(orderId) {
+    let orderDetail = {}
+    for (const order of orderData) {
+      if (order.id == orderId) {
+        orderDetail = order
+      }
+    }
+    $(document).ready(function () {
+      $("#popupModal").modal("show")
+    })
+    for (let [id, count] of Object.entries(orderDetail.cart)) {
+      let productData = {}
+      const newRow = document.createElement("tr")
+      document.getElementById("detailCartTable").innerHTML = ""
+
+      fetch(`http://localhost:3000/product/${id}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`)
+          }
+          return response.json()
+        })
+        .then((data) => {
+          productId = data
+        })
+        .catch((error) => {
+          console.error("Error:", error)
+        })
+        .finally(() => {
+          newRow.innerHTML = `
+            <th><img width="50" src="/Product/${id}.jpg"></th>
+            <td><div class="table__product__name">${productId.name}</div></td>
+            <td>${count}</td>
+            `
+          document.getElementById("detailCartTable").appendChild(newRow)
+        })
+    }
+  }
+</script>
